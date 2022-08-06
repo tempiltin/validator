@@ -1,10 +1,10 @@
 import React from 'react'
+import AceEditor from "react-ace";
 
 
 import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/theme-github";
 import "ace-builds/src-noconflict/ext-language_tools"
-import AceEditor from "react-ace";
 
 const Validatorjs = () => {
   const  onChange = (newValue)=> {
@@ -12,7 +12,8 @@ const Validatorjs = () => {
   }
   
   return (
-    <AceEditor
+<main className='main_editor'>
+<AceEditor 
     mode="javascript"
     theme="github"
     onChange={onChange}
@@ -24,6 +25,7 @@ const Validatorjs = () => {
       enableSnippets: true
     }}
   />
+</main>
   )
 }
 

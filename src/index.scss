@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  list-style: none !important;
+  text-decoration: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.video-js{
+  width: 100% !important;
+  height: 100vh !important;
+}
+
+.posit{
+  position: fixed;
+  bottom: 0;
+  z-index: 100000000;
+  width: 100%;
+  height: 350px;
+  backdrop-filter: blur(10px);
+  align-items: center;
+}
+.card {
+  .card_header{
+    overflow: hidden;
+    img{
+      cursor: pointer;
+      transform: scale(1) rotate(15deg);
+      transition: all 900ms;
+      &:hover{
+        transform: scale(1.2) rotate(0deg);
+      }
+    }
+  }
+
+}
+.main_editor{
+  
+}
+
+#UNIQUE_ID_OF_DIV{
+  width: 962px;
+  height: 534px;
+  margin: auto;
+  width: 1000px !important;
+  font-size: 24px !important;
+  background: rgb(19,23,34);
+  color: rgb(123,173,70);
+}
+.ace_content{
+
+  font-size: 20px;
+}
