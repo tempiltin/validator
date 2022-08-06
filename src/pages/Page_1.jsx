@@ -1,25 +1,14 @@
 import React from 'react'
-import VideoPlayer from '../Components/Video_Js';
 
-const Page_1 = () => {
-    const videoJsOptions = {
-        autoplay: false,
-        playbackRates: [0.5, 1, 1.25, 1.5, 2],
-        width: 720,
-        height: 300,
-        controls: true,
-        sources: [
-          {
-            src: 'https://vjs.zencdn.net/v/oceans.mp4',
-            type: 'video/mp4',
-          },
-        ],
-      };
-    
+import ReactPlayer from 'react-player'
+
+import video from "../video/Planet Earth Revolving.mp4"
+const Page1 = () => {
+
   return (
-    <VideoPlayer {...videoJsOptions} />
+    <ReactPlayer url={video} playing={true} />
 
   )
 }
 
-export default Page_1
+export default Page1
