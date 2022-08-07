@@ -15,65 +15,148 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.video-js{
+
+.video-js {
   width: 100% !important;
   height: 100vh !important;
 }
 
-.posit{
+.posit {
   position: fixed;
-  bottom: 0;
   z-index: 100000000;
   width: 100%;
   height: 350px;
   backdrop-filter: blur(10px);
   align-items: center;
+  transition: 600ms;
 }
+
+.posit_true {
+  bottom: 0%;
+}
+
+.posit_false {
+  bottom: -100%;
+}
+
 .card {
-  .card_header{
+  .card_header {
     overflow: hidden;
-    img{
+
+    img {
       cursor: pointer;
       transform: scale(1) rotate(15deg);
       transition: all 900ms;
-      &:hover{
+
+      &:hover {
         transform: scale(1.2) rotate(0deg);
       }
     }
   }
 
 }
-.main_editor{
+
+.main_editor {
   width: 100%;
   height: 100vh;
-  background: rgb(19,23,34);
+  background: rgb(19, 23, 34);
   display: flex;
   justify-content: center;
 }
 
-#UNIQUE_ID_OF_DIV{
-  background: rgb(23,33,48);
+#UNIQUE_ID_OF_DIV {
+  background: rgb(23, 33, 48);
   width: 962px;
   height: 534px;
-  margin:  auto;
+  margin: auto;
   width: 1000px !important;
   font-size: 24px !important;
- 
-  color: rgb(123,173,70);
+
+  color: rgb(123, 173, 70);
 }
-.ace_content{
+
+.ace_content {
 
   font-size: 20px;
 }
-.ace-github .ace_gutter{
-  background: rgb(23,33,48);
-  
+
+.ace-github .ace_gutter {
+  background: rgb(23, 33, 48);
+
 }
-.ace_cursor{
+
+.ace_cursor {
   width: 1px !important;
   // height: 1px !important;
 }
 
-.ace_text-input{
+.ace_text-input {
   color: white;
+}
+
+// ==============================================================================================
+
+.form_body {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.708);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+ transition: 500ms;
+}
+.form_true{
+  transform: scale(1);
+}
+.form_false{
+  transform: scale(0);
+}
+
+.form_class {
+  height: 511px;
+  width: 484px;
+  border-radius: 20px;
+  padding: 40px;
+
+  background: #F5F5F5;
+
+  input {
+    height: 64px;
+    width: 100%;
+
+    border-radius: 12px;
+    border: 1px solid rgba(0, 122, 255, 0.8);
+    border-radius: 12px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(0, 122, 255, 0.8);
+    padding-left: 15px;
+
+
+  }
+
+  input::placeholder {
+    color: rgba(0, 122, 255, 0.8);
+  }
+}
+
+:focus {
+  outline: none;
+}
+
+.btn_form {
+  width: 292px !important;
+  background: #007AFF !important;
+  color: #F5F5F5 !important;
+  font-size: 18px !important;
+  border-radius: 12px !important;
+  margin: auto;
+  padding: 20px 74px !important;
 }
