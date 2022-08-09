@@ -16,26 +16,27 @@ import Form from '../Components/form';
       <input type="password" value={password} onChange={(e) => { setPassword(e.target.value) }} name='password' placeholder='password' />
 
       <button type="submit" onClick={saveUser}>Submit</button>
-    </div> */
+    </div>
+*/
 
 
 const Python_page = () => {
 
 
-  const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
-  const [phonenumber, setPhonenumber] = useState("");
-  const [newValue, setNewValue] = useState([])
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [phone, setPhone] = useState("");
+  const [code, setCode] = useState([])
   const [codesubmit, setCodesubmit] = useState(false)
 
   const onChange = (newValue) => {
     console.log("change", newValue);
-    setNewValue(newValue)
+    setCode(newValue)
   }
   const saveUser = () => {
-    console.log({ surname, name, phonenumber, newValue });
+    console.log({ lastname, firstname, phone, code });
 
-    let data = { surname, name, phonenumber, newValue }
+    let data = { lastname, firstname, phone, code }
     fetch("http://localhost:3000/python ", {
       method: "POST",
       headers: {
@@ -58,12 +59,12 @@ const Python_page = () => {
 
   return (
     <>
-      <Form saveUser={saveUser} setName={setName}
-        setSurname={setSurname}
-        setPhonenumber={setPhonenumber}
-        name={name}
-        surname={surname}
-        phonenumber={phonenumber}
+      <Form saveUser={saveUser} setName={setFirstName}
+        setSurname={setLastname}
+        setPhonenumber={setPhone}
+        name={firstname}
+        surname={lastname}
+        phonenumber={phone}
         codesubmit={codesubmit}
       />
       <main className='main_editor'>

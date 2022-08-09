@@ -1,45 +1,32 @@
-import React, { useState } from 'react'
-
-import video from "../video/Planet Earth Revolving.mp4"
-import '../lbs/video.css'
-import Lang from '../Components/Lang'
-
-
-import py from '../images/python.jpg'
-import js from '../images/Unofficial_JavaScript_logo_2.png'
-import php from "../images/php-logo.jpg"
-import flutter from '../images/flutter.png'
+import React, { useState } from 'react';
+import video from "../video/Planet Earth Revolving.mp4";
+import '../lbs/video.css';
+import Lang from '../Components/Lang';
+import py from '../images/python.jpg';
+import js from '../images/Unofficial_JavaScript_logo_2.png';
+import php from "../images/php-logo.jpg";
+import flutter from '../images/flutter.png';
 const Page1 = () => {
-
-
-   const [state, setState] = useState(false)
-  const myhandlerEnded = (e)=>{
-  
-      setState(true)
-    
-    // alert(state)
-  }
-  
-  const myhandlerPlayer = ()=>{
-    setState(false)
-  }
-
+  const [state, setState] = useState(false)
+  const myhandlerEnded = (e) => setState(true)
+  const myhandlerPlayer = () => setState(false)
   return (
     <>
       <div className={state ? "posit posit_true" : "posit posit_false"}>
         <div className="container">
+          <h1>Kurslardan birini tanlang</h1>
           <div className="row mt-4 justify-content-around align-center align-items-center">
             <div className="col-3">
-              <Lang name={'Python'} url={'/python'} img={py}/>
+              <Lang name={'Python'} url={'/python'} img={py} />
             </div>
             <div className="col-3">
-              <Lang name={'Python'} url={'/javascript'} img={js}/>
+              <Lang name={'javascript'} url={'/javascript'} img={js} />
             </div>
             <div className="col-3">
-              <Lang name={'Python'} url={'/php'} img={php}/>
+              <Lang name={'php'} url={'/php'} img={php} />
             </div>
             <div className="col-3">
-              <Lang name={'Python'} url={'/flutter'} img={flutter}/>
+              <Lang name={'flutter'} url={'/flutter'} img={flutter} />
             </div>
           </div>
         </div>
@@ -59,10 +46,9 @@ const Page1 = () => {
         <source src={video} type="video/mp4" />
         <source src="MY_VIDEO.webm" type="video/webm" />
       </video>
-    
+
       <script src="../lbs/vide.js"></script>
     </>
   )
-}
-
-export default Page1
+};
+export default Page1;
