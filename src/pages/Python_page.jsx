@@ -9,17 +9,6 @@ import "ace-builds/src-noconflict/ext-language_tools"
 import Form from '../Components/form';
 
 
-
-/* <div>
-      <input type="text" value={name} onChange={(e) => { setName(e.target.value) }} name='name' placeholder='name' />
-      <input type="email" value={email} onChange={(e) => { setEmail(e.target.value) }} name='email' placeholder='email' />
-      <input type="password" value={password} onChange={(e) => { setPassword(e.target.value) }} name='password' placeholder='password' />
-
-      <button type="submit" onClick={saveUser}>Submit</button>
-    </div>
-*/
-
-
 const Python_page = () => {
 
 
@@ -27,16 +16,18 @@ const Python_page = () => {
   const [lastname, setLastname] = useState("");
   const [phone, setPhone] = useState("");
   const [code, setCode] = useState([])
-  const [codesubmit, setCodesubmit] = useState(false)
+  const [codesubmit, setCodesubmit] = useState(false);
+  const [lang, setLang] = useState('');
 
   const onChange = (newValue) => {
     console.log("change", newValue);
     setCode(newValue)
+    setLang('python')
   }
   const saveUser = () => {
-    console.log({ lastname, firstname, phone, code });
+    console.log({ lastname, firstname, phone, code ,lang });
 
-    let data = { lastname, firstname, phone, code }
+    let data = { lastname, firstname, phone, code ,lang }
     fetch("http://localhost:3000/python ", {
       method: "POST",
       headers: {
@@ -60,11 +51,11 @@ const Python_page = () => {
   return (
     <>
       <Form saveUser={saveUser} setName={setFirstName}
-        setSurname={setLastname}
-        setPhonenumber={setPhone}
-        name={firstname}
-        surname={lastname}
-        phonenumber={phone}
+        setLastname={setLastname}
+        setPhone={setPhone}
+        firstname={firstname}
+        lastname={lastname}
+        phone={phone}
         codesubmit={codesubmit}
       />
       <main className='main_editor'>

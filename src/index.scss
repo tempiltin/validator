@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700;800&family=Nanum+Gothic:wght@400;800&family=Roboto:wght@100;400;700;900&family=Square+Peg&family=Ubuntu:wght@400;700&display=swap');
+
 body {
   margin: 0;
   margin: 0;
@@ -9,12 +11,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
   list-style: none !important;
   text-decoration: none;
+
+  /* 
+  
+  font-family: 'Catamaran', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Square Peg', cursive;
+font-family: 'Ubuntu', sans-serif;
+  
+  */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
 
 .video-js {
   width: 100% !important;
@@ -146,7 +155,7 @@ code {
   input {
     height: 64px;
     width: 100%;
-
+    font-family: 'Nanum Gothic', sans-serif !important;
     border-radius: 12px;
     border: 1px solid rgba(0, 122, 255, 0.8);
     border-radius: 12px;

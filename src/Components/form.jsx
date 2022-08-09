@@ -12,13 +12,13 @@ const form = (props) => {
 
         <div action="" className='row form_class'>
             <div className="col-12">
-                <input type="text" name="name" value={props.name} onChange={(e) => { props.setName(e.target.value) }} id="" placeholder='Ismingiz' required/>
+                <input type="text" name="firstname" value={props.firstname} onChange={(e) => { props.setName(e.target.value) }} id="" placeholder='Ismingiz' required/>
             </div>
             <div className="col-12">
-                <input type="text" name="surname" value={props.surname} onChange={(e) => { props.setSurname(e.target.value) }} id="" placeholder='Familiyangiz' required/>
+                <input type="text" name="lastname" value={props.lastname} onChange={(e) => { props.setSurname(e.target.value) }} id="" placeholder='Familiyangiz' required/>
             </div>
             <div className="col-12">
-                <input type="number" name="phonenumber" value={props.phonenumber} onChange={(e) => { props.setPhonenumber(e.target.value) }} id="" placeholder='Telefon raqamingiz' required/>
+                <input type="number" name="phone" value={props.phone} onChange={(e) => { props.setPhonenumber(e.target.value) }} id="" placeholder='Telefon raqamingiz' required/>
             </div>
            <button type="submit" onClick={props.saveUser} className='btn btn_form'>Yuborish</button>
         </div>
