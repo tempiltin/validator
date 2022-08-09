@@ -6,6 +6,9 @@ import Lang from '../Components/Lang'
 
 
 import py from '../images/python.jpg'
+import js from '../images/Unofficial_JavaScript_logo_2.png'
+import php from "../images/php-logo.jpg"
+import flutter from '../images/flutter.png'
 const Page1 = () => {
 
 
@@ -30,13 +33,13 @@ const Page1 = () => {
               <Lang name={'Python'} url={'/python'} img={py}/>
             </div>
             <div className="col-3">
-              <Lang name={'Python'} url={'/javascript'} img={py}/>
+              <Lang name={'Python'} url={'/javascript'} img={js}/>
             </div>
             <div className="col-3">
-              <Lang name={'Python'} url={'/php'} img={py}/>
+              <Lang name={'Python'} url={'/php'} img={php}/>
             </div>
             <div className="col-3">
-              <Lang name={'Python'} url={'/flutter'} img={py}/>
+              <Lang name={'Python'} url={'/flutter'} img={flutter}/>
             </div>
           </div>
         </div>

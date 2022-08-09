@@ -42,18 +42,16 @@ code {
 .card {
   .card_header {
     overflow: hidden;
-
     img {
+      width: 100%;
       cursor: pointer;
       transform: scale(1) rotate(15deg);
       transition: all 900ms;
-
       &:hover {
         transform: scale(1.2) rotate(0deg);
       }
     }
   }
-
 }
 
 .main_editor {
@@ -66,7 +64,7 @@ code {
 
 #UNIQUE_ID_OF_DIV {
   background: rgb(23, 33, 48);
-  width: 962px;
+
   height: 534px;
   margin: auto;
   width: 1000px !important;
@@ -77,7 +75,7 @@ code {
 
 .ace_content {
 
-  font-size: 20px;
+  color: rgb(123, 173, 70) !important;
 }
 
 .ace-github .ace_gutter {
