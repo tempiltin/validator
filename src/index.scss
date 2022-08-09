@@ -198,11 +198,13 @@ font-family: 'Ubuntu', sans-serif;
   position: fixed;
   top: 0;
   left: 0;
+
   transform: scale(1);
   width: 100%;
   height: 100vh;
   background: rgb(19, 23, 34) url('./images/BG.png') no-repeat center center / cover;
    transition: 500ms;
+   z-index: 100000000000000000000000000000000000000000000;
   h2 {
     margin-top: 60px;
     font-style: normal;

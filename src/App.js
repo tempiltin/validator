@@ -11,6 +11,8 @@ import Phppage from './pages/Php_page';
 import Result from './Components/Result'
 
 const App = () => {
+
+    // setTimeout()
   return (
     <>
 

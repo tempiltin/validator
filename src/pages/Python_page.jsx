@@ -4,9 +4,10 @@ import AceEditor from "react-ace";
 
 import "ace-builds/src-noconflict/mode-python";
 // import "ace-builds/src-noconflict/theme-github";
-import "ace-builds/src-noconflict/theme-cobalt";
+import "ace-builds/src-noconflict/theme-github";
 import "ace-builds/src-noconflict/ext-language_tools"
 import Form from '../Components/form';
+import Result from '../Components/Result';
 
 
 const Python_page = () => {
@@ -18,6 +19,8 @@ const Python_page = () => {
   const [code, setCode] = useState([])
   const [codesubmit, setCodesubmit] = useState(false);
   const [lang, setLang] = useState('');
+
+  const [well , setWell] = useState(false)
 
   const onChange = (newValue) => {
     console.log("change", newValue);
@@ -50,6 +53,7 @@ const Python_page = () => {
 
   return (
     <>
+    <Result />  
       <Form saveUser={saveUser} setName={setFirstName}
         setLastname={setLastname}
         setPhone={setPhone}
