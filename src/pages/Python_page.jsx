@@ -20,7 +20,7 @@ const Python_page = () => {
   const [codesubmit, setCodesubmit] = useState(false);
   const [lang, setLang] = useState('');
 
-  const [well , setWell] = useState(false)
+  // const [well , setWell] = useState(false);
 
   const onChange = (newValue) => {
     console.log("change", newValue);
