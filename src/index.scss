@@ -50,8 +50,8 @@ font-family: 'Ubuntu', sans-serif;
 
 .cardt {
   width: 100%;
-  
-  
+
+
   .card_header {
     border-radius: 12px;
 
@@ -63,25 +63,28 @@ font-family: 'Ubuntu', sans-serif;
       width: 100%;
       height: 200px;
       cursor: pointer;
-      transform: scale(1) ;
+      transform: scale(1);
       transition: all 900ms;
 
       &:hover {
-        transform: scale(1.2) ;
+        transform: scale(1.2);
       }
     }
   }
 }
-.posit{
-  h1{
+
+.posit {
+  h1 {
     text-align: center;
     color: white;
   }
-  h3{
+
+  h3 {
     margin-top: 12px;
     color: white;
   }
 }
+
 .main_editor {
   width: 100%;
   height: 100vh;
@@ -187,4 +190,39 @@ font-family: 'Ubuntu', sans-serif;
   border-radius: 12px !important;
   margin: auto;
   padding: 20px 74px !important;
+}
+
+// //////////////////////////////////////////////////////////////////@at-root
+
+.result_section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: scale(1);
+  width: 100%;
+  height: 100vh;
+  background: rgb(19, 23, 34) url('./images/BG.png') no-repeat center center / cover;
+   transition: 500ms;
+  h2 {
+    margin-top: 60px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 64px;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 12px;
+    font-size: 75px;
+    text-align: center;
+    color: white;
+  }
+
+  img {
+    height: 642px;
+    width: 642px;
+    margin: auto;
+  }
+
 }
