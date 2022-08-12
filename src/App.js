@@ -8,7 +8,7 @@ import Pythonpage from './pages/Python_page';
 import Flutterpage from './pages/Flutter_page'
 
 import Phppage from './pages/Php_page';
-import Result from './Components/Result'
+
 
 const App = () => {
 
@@ -25,7 +25,7 @@ const App = () => {
       <Route path='/flutter'  element={<Flutterpage />}/>
       <Route path='/php'  element={<Phppage />}/>
       <Route path='/editor'  element={<Validatorjs />}/>
-      <Route path='/result'  element={<Result />}/>
+  
 
     </Routes>
     
