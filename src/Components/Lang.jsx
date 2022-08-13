@@ -10,6 +10,4 @@ const Lang = (props) => (
         <h3>{props.name}</h3>
     </div>
 )
-
-
 export default Lang;

@@ -6,24 +6,14 @@ import py from '../images/python.jpg';
 import js from '../images/Unofficial_JavaScript_logo_2.png';
 import php from "../images/php-logo.jpg";
 import flutter from '../images/flutter.png';
-
 import Form from '../Components/form';
 import { useNavigate } from 'react-router-dom';
-
-// const Data = [
-
-//   first_name:"asd",
-//   last_name:"asd",
-//   phone:545664
-
-// ]
 const Page1 = () => {
   const [state, setState] = useState(false);
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastname] = useState("");
   const [phone, setPhone] = useState();
   const [language, setLanguage] = useState();
-
   const [codesubmit, setCodesubmit] = useState(false);
   const navigate = useNavigate();
   const saveUser = () => {
@@ -39,7 +29,6 @@ const Page1 = () => {
       body: JSON.stringify(data)
     }).then((result) => {
       console.warn("result", result);
-
       navigate('/' + language)
     })
     //input value ni tozalash
@@ -50,9 +39,6 @@ const Page1 = () => {
       setCodesubmit(false)
     }, 500)
   }
-
-
-
   const myhandlerEnded = (e) => setState(true)
   const myhandlerPlayer = () => setState(false)
   const onSubmit = (e, lang) => {
@@ -64,8 +50,6 @@ const Page1 = () => {
       setCodesubmit(true);
     }
   }
-
-
   return (
     <>
       {/* foydalanuvchidan ma'lumotlarni olish  */}
@@ -95,9 +79,6 @@ const Page1 = () => {
             </div>
           </div>
         </div>
-
-
-
       </div>
       <video
         id="my-video"
