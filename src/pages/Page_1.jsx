@@ -22,13 +22,14 @@ const Page1 = () => {
   const [first_name, setFirstName] = useState("");
   const [last_name, setLastname] = useState("");
   const [phone, setPhone] = useState();
+  const [language, setLanguage] = useState();
 
   const [codesubmit, setCodesubmit] = useState(false);
   const navigate = useNavigate();
   const saveUser = () => {
     let data = { last_name, first_name, phone, }
-    console.log(data);
-// http://localhost/company.site/leads/
+    console.log(language);
+    // http://localhost/company.site/leads/
     fetch("https://jsonplaceholder.typicode.com/posts/", {
       method: "POST",
       headers: {
@@ -38,8 +39,8 @@ const Page1 = () => {
       body: JSON.stringify(data)
     }).then((result) => {
       console.warn("result", result);
-   
-      navigate('/python')
+
+      navigate('/' + language)
     })
     //input value ni tozalash
     setFirstName("")
@@ -54,15 +55,17 @@ const Page1 = () => {
 
   const myhandlerEnded = (e) => setState(true)
   const myhandlerPlayer = () => setState(false)
-
-  const onSubmit = (e) => {
+  const onSubmit = (e, lang) => {
     e.preventDefault();
+    setLanguage(lang);
     if (codesubmit) {
       codesubmit(false);
     } else {
       setCodesubmit(true);
     }
   }
+
+
   return (
     <>
 
@@ -76,23 +79,23 @@ const Page1 = () => {
         codesubmit={codesubmit}
       />
       <div className={state ? "posit posit_true" : "posit posit_false"}>
-       <div className="container">
-            <h1>Kurslardan birini tanlang</h1>
-            <div className="row mt-4 justify-content-around align-center align-items-center">
-              <div className="col-3">
-                <Lang name={'Python'} url={'/python'} img={py} onSubmit={onSubmit} />
-              </div>
-              <div className="col-3">
-                <Lang name={'javascript'} url={'/javascript'} img={js} onSubmit={onSubmit} />
-              </div>
-              <div className="col-3">
-                <Lang name={'php'} url={'/php'} img={php} onSubmit={onSubmit} />
-              </div>
-              <div className="col-3">
-                <Lang name={'flutter'} url={'/flutter'} img={flutter} onSubmit={onSubmit} />
-              </div>
+        <div className="container">
+          <h1>Kurslardan birini tanlang</h1>
+          <div className="row mt-4 justify-content-around align-center align-items-center">
+            <div className="col-3">
+              <Lang name={'Python'} url={'/python'} img={py} onSubmit={(e) => onSubmit(e, "python")} />
+            </div>
+            <div className="col-3">
+              <Lang name={'javascript'} url={'/javascript'} img={js} onSubmit={(e) => onSubmit(e, "js")} />
+            </div>
+            <div className="col-3">
+              <Lang name={'php'} url={'/php'} img={php} onSubmit={(e) => onSubmit(e, "php")} />
+            </div>
+            <div className="col-3">
+              <Lang name={'flutter'} url={'/flutter'} img={flutter}  onSubmit={(e) => onSubmit(e, "flutter")} />
             </div>
           </div>
+        </div>
 
 
 

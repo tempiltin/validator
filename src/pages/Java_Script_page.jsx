@@ -1,8 +1,9 @@
 import React from 'react'
-
+import Iframe from 'react-iframe'
+const URI = 'https://playcode.io/javascript/'
 const Java_Script_page = () => {
   return (
-    <div>Java_Script_page</div>
+    <Iframe className='Iframe' src={URI} frameborder="0" />
   )
 }
 

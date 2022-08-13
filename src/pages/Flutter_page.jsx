@@ -1,8 +1,9 @@
 import React from 'react'
-
+import Iframe from 'react-iframe'
+const URI = 'https://dartpad.dev'
 const Flutter_page = () => {
   return (
-    <div>Flutter_page</div>
+    <Iframe className='Iframe' src={URI} frameborder="0" />
   )
 }
 
