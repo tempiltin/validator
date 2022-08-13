@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const Lang = (props) => (
     <div className="cardt" >
         <div className="card_header">
-            <Link to={props.url}>
+            <Link to={props.url} onClick={props.onSubmit} >
                 <img src={props.img} alt="" />
             </Link>
         </div>

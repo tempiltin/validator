@@ -131,12 +131,12 @@ font-family: 'Ubuntu', sans-serif;
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.708);
+  background-color: rgba(0, 0, 0, 0.902);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9;
-  transition: 500ms;
+  z-index: 1000000001;
+  transition: 600ms;
 }
 
 .form_true {

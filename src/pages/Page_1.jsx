@@ -8,16 +8,28 @@ import php from "../images/php-logo.jpg";
 import flutter from '../images/flutter.png';
 
 import Form from '../Components/form';
+import { useNavigate } from 'react-router-dom';
+
+// const Data = [
+
+//   first_name:"asd",
+//   last_name:"asd",
+//   phone:545664
+
+// ]
 const Page1 = () => {
   const [state, setState] = useState(false);
-  const [firstname, setFirstName] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [phone, setPhone] = useState("");
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastname] = useState("");
+  const [phone, setPhone] = useState();
+
   const [codesubmit, setCodesubmit] = useState(false);
+  const navigate = useNavigate();
   const saveUser = () => {
-    console.log({ lastname, firstname, phone, });
-    let data = { lastname, firstname, phone, }
-    fetch("http://localhost:3000/python ", {
+    let data = { last_name, first_name, phone, }
+    console.log(data);
+// http://localhost/company.site/leads/
+    fetch("https://jsonplaceholder.typicode.com/posts/", {
       method: "POST",
       headers: {
         'Accept': 'application/json',
@@ -26,10 +38,23 @@ const Page1 = () => {
       body: JSON.stringify(data)
     }).then((result) => {
       console.warn("result", result);
+   
+      navigate('/python')
     })
+    //input value ni tozalash
+    setFirstName("")
+    setLastname("")
+    setPhone("")
+    setTimeout((e) => {
+      setCodesubmit(false)
+    }, 500)
   }
+
+
+
   const myhandlerEnded = (e) => setState(true)
   const myhandlerPlayer = () => setState(false)
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (codesubmit) {
@@ -41,35 +66,36 @@ const Page1 = () => {
   return (
     <>
 
-        {/* foydalanuvchidan ma'lumotlarni olish  */}
-        <Form saveUser={saveUser} setName={setFirstName}
+      {/* foydalanuvchidan ma'lumotlarni olish  */}
+      <Form saveUser={saveUser} setFirstName={setFirstName}
         setLastname={setLastname}
         setPhone={setPhone}
-        firstname={firstname}
-        lastname={lastname}
+        first_name={first_name}
+        last_name={last_name}
         phone={phone}
         codesubmit={codesubmit}
       />
       <div className={state ? "posit posit_true" : "posit posit_false"}>
-    {
-      codesubmit === true ? <div className="container">
-      <h1>Kurslardan birini tanlang</h1>
-      <div className="row mt-4 justify-content-around align-center align-items-center">
-        <div className="col-3">
-          <Lang name={'Python'} url={'/python'} img={py} onSubmit={onSubmit} />
-        </div>
-        <div className="col-3">
-          <Lang name={'javascript'} url={'/javascript'} img={js} onSubmit={onSubmit} />
-        </div>
-        <div className="col-3">
-          <Lang name={'php'} url={'/php'} img={php} onSubmit={onSubmit} />
-        </div>
-        <div className="col-3">
-          <Lang name={'flutter'} url={'/flutter'} img={flutter} onSubmit={onSubmit} />
-        </div>
-      </div>
-    </div> : <button onClick={onSubmit}>Yo'nalish tanlash</button>
-    }
+       <div className="container">
+            <h1>Kurslardan birini tanlang</h1>
+            <div className="row mt-4 justify-content-around align-center align-items-center">
+              <div className="col-3">
+                <Lang name={'Python'} url={'/python'} img={py} onSubmit={onSubmit} />
+              </div>
+              <div className="col-3">
+                <Lang name={'javascript'} url={'/javascript'} img={js} onSubmit={onSubmit} />
+              </div>
+              <div className="col-3">
+                <Lang name={'php'} url={'/php'} img={php} onSubmit={onSubmit} />
+              </div>
+              <div className="col-3">
+                <Lang name={'flutter'} url={'/flutter'} img={flutter} onSubmit={onSubmit} />
+              </div>
+            </div>
+          </div>
+
+
+
       </div>
       <video
         id="my-video"

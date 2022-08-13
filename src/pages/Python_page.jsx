@@ -2,7 +2,11 @@ import React from 'react'
 
 const Python_page = () => {
   return (
-    <div>Python_page</div>
+    <>
+      {/* foydalanuvchidan ma'lumotlarni olish  */}
+   dsdsdsdd
+    
+    </>
   )
 }
 
