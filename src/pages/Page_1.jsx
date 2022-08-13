@@ -68,7 +68,6 @@ const Page1 = () => {
 
   return (
     <>
-
       {/* foydalanuvchidan ma'lumotlarni olish  */}
       <Form saveUser={saveUser} setFirstName={setFirstName}
         setLastname={setLastname}
