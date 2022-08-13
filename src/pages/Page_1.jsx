@@ -9,16 +9,13 @@ import flutter from '../images/flutter.png';
 
 import Form from '../Components/form';
 const Page1 = () => {
-  const [state, setState] = useState(false)
-  const myhandlerEnded = (e) => setState(true)
-  const myhandlerPlayer = () => setState(false)
+  const [state, setState] = useState(false);
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastname] = useState("");
   const [phone, setPhone] = useState("");
   const [codesubmit, setCodesubmit] = useState(false);
   const saveUser = () => {
     console.log({ lastname, firstname, phone, });
-
     let data = { lastname, firstname, phone, }
     fetch("http://localhost:3000/python ", {
       method: "POST",
@@ -31,6 +28,8 @@ const Page1 = () => {
       console.warn("result", result);
     })
   }
+  const myhandlerEnded = (e) => setState(true)
+  const myhandlerPlayer = () => setState(false)
   const onSubmit = (e) => {
     e.preventDefault();
     if (codesubmit) {
@@ -39,9 +38,10 @@ const Page1 = () => {
       setCodesubmit(true);
     }
   }
-
   return (
     <>
+
+        {/* foydalanuvchidan ma'lumotlarni olish  */}
         <Form saveUser={saveUser} setName={setFirstName}
         setLastname={setLastname}
         setPhone={setPhone}
@@ -70,16 +70,12 @@ const Page1 = () => {
       </div>
     </div> : <button onClick={onSubmit}>Yo'nalish tanlash</button>
     }
-        
-
-
       </div>
       <video
         id="my-video"
         className="video-js"
         controls
         preload="auto"
-
         poster="https://s3.eu-west-3.amazonaws.com/dealna/images/programming-languages-1-20200802061727.jpg"
         data-setup="{}"
         onEnded={myhandlerEnded}
@@ -89,9 +85,7 @@ const Page1 = () => {
         <source src={video} type="video/mp4" />
         <source src="MY_VIDEO.webm" type="video/webm" />
       </video>
-
       <script src="../lbs/vide.js"></script>
-
     </>
   )
 };
